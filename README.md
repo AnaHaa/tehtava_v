@@ -9,4 +9,4 @@ In the project directory, you can run the project using the following commands:
 ### `npm install`
 ### `npm start`
 
-Made by Antti Haarala as a MVP ( Mininum viable product )
+Made by Antti Haarala as a MVP ( Minimum viable product )
