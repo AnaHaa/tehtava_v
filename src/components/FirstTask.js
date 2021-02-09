@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 
 // Upward trend function to check the array using between range
 // Stores the first upward trend
-// Defined trend as 3 days or more
+// Defined trend as 2 days or more
 function UpwardTrend(arr, indexRange) {
     // Used to store the temporary and permanent values for counter and index
     let counter = 1, tempCounter = 1;
