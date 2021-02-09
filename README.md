@@ -10,3 +10,4 @@ In the project directory, you can run the project using the following commands:
 ### `npm start`
 
 Made by Antti Haarala as a MVP ( Minimum viable product )
+CSS made quickly as part of MVP
