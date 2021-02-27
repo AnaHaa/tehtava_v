@@ -69,15 +69,11 @@ export default function SecondTask({ csvData, indexRange }) {
 
     // Check the data 
     useEffect(() => {
-        // Validation data function
         const fetchData = () => {
-            // Check if the data and range is valid
             if (csvData.length > 1) {
-                // Disable loading
                 setLoading(false);
             }
         };
-        // Use validation data function
         fetchData();
     }, [csvData])
 

@@ -1,18 +1,11 @@
 import React, { useRef, useEffect, useState } from 'react';
 
-// Upward trend function to check the array using between range
-// Stores the first upward trend
-// Defined trend as 2 days or more
 function UpwardTrend(arr, indexRange) {
-    // Used to store the temporary and permanent values for counter and index
     let counter = 1, tempCounter = 1;
     let array = [], tempArray = [];
 
-    // Use foreach function to get index, [1] is the closing
     arr[1].forEach((value, index) => {
-        // Is used to check, if the index is in the selected location
         if (indexRange[1] <= index && index <= indexRange[0]) {
-            // Check if the value is higher than the next day ( comparing 01/07/2021 > 01/06/2021 )
             if (parseFloat(value.substring(2)) > parseFloat(arr[1][index + 1].substring(2)) && index < indexRange[0]) {
                 // Add to the temp counter and push the index to the temp array
                 tempCounter++;
@@ -62,9 +55,7 @@ export default function FirstTask({ csvData, indexRange }) {
 
     // Check the validation 
     useEffect(() => {
-        // Validation function
         const fetchData = () => {
-            // Check if the data and range is valid
             if (csvData.length > 0) {
                 setLoading(false);
             }

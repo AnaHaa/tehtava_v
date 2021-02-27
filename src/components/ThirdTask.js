@@ -58,14 +58,10 @@ function SimpleMovingAverage(csvArr, indexRange) {
 }
 
 export default function ThirdTask({ csvData, indexRange }) {
-    // The loading useState
     const [isLoading, setLoading] = useState(true);
-    // The arrays for storing data useRef
     const averageArr = useRef([]);
 
-    // Check the data 
     useEffect(() => {
-        // Validation data function
         const fetchData = () => {
             // Check if the data and range is valid
             if (csvData.length > 1) {
@@ -73,7 +69,6 @@ export default function ThirdTask({ csvData, indexRange }) {
                 setLoading(false);
             }
         };
-        // Use validation data function
         fetchData();
     }, [csvData])
 
