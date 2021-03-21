@@ -3,11 +3,22 @@ import DatePicker from 'react-datepicker'
 import "react-datepicker/dist/react-datepicker.css"
 import nearestDate from 'nearest-date';
 
+/*
+Datepicker component to set date range
+Uses csv data to get the nearest valid date if chosen
+date is not valid
+*/
 export default function DateRange({ csvData, setIndexRange }) {
-    const [startDate, setStartDate] = useState(new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()));
+    // Start date is set to current day
+    const [startDate, setStartDate] = useState(
+        new Date(
+            new Date().getFullYear(),
+            new Date().getMonth(),
+            new Date().getDate()
+        )
+    );
     const [endDate, setEndDate] = useState(null);
 
-    // Function to set new date on change
     const onChange = dates => {
         const [start, end] = dates;
         setStartDate(start);
